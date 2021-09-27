@@ -1,0 +1,462 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --dark-blue: hsl(233, 26%, 24%);
+    --lime-green: hsl(136, 65%, 51%);
+    --bright-cyan: hsl(192, 70%, 51%);
+
+    --grayish-blue: hsl(233, 8%, 62%);
+    --light-grayish-blue: hsl(220, 16%, 96%);
+    --very-light-gray: hsl(0, 0%, 98%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body{
+    overflow-x: hidden;
+    width: 100%;
+    font-family: "Public Sans" , sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav{
+    background-color: var(--white);
+    overflow: hidden;
+    position: relative;
+    padding: 26px;
+}
+
+#links{
+    display: none;
+}
+.logo{
+    display: block;
+}
+
+#links a {
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+    text-align: center;
+    padding: 12px 0;
+    color: var(--dark-blue);
+    font-weight: 400;
+}
+
+
+nav .dropdown{
+    display: block;
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    background: var(--white);
+    border: none;
+}
+nav .request-invite{
+    display: none;
+}
+
+
+.details{
+    display: flex;
+    flex-direction: column-reverse;
+}
+.mockup-img{
+    object-fit: cover;
+    object-position: 0 -130px;
+    width: 100%;
+}
+
+.side-image{
+    height: 21rem;
+    background: url(./images/bg-intro-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 48rem 36rem;
+    padding: 0 20px;
+    background-position: -98px -220px;
+}
+
+.info{
+    padding: 20px;
+    padding-bottom: 70px;
+    text-align: center;
+}
+
+.info h1{
+    font-size: 2.6rem;
+    font-weight: 400;
+    color: var(--dark-blue);
+    padding-bottom: 16px;
+}
+
+.info p{
+    color: var(--grayish-blue);
+    line-height: 24px;
+    padding-bottom: 20px;
+}
+
+.request-invite{
+    width: 9rem;
+    border: none;
+    outline: none;
+    padding: 12px;
+    border-radius: 20px;
+    color: var(--white);
+    background: linear-gradient(to right, var(--lime-green),var(--bright-cyan) );
+}
+
+
+.reason-to-choose{
+    padding: 70px 20px;
+    text-align: center;
+    background-color: var(--light-grayish-blue);
+}
+
+.reason h1{
+    font-size: 1.9rem;
+    font-weight: 400;
+    padding: 0 22px;
+    padding-bottom: 22px;
+    color: var(--dark-blue);
+}
+
+.reason p{
+    color: var(--grayish-blue);
+    line-height: 24px;
+    padding-bottom: 70px;
+}
+
+.list h2{
+    color: var(--dark-blue);
+    font-size: 1.4rem;
+    font-weight: 400;
+    padding: 20px; 
+}
+.list p{
+    color: var(--grayish-blue);
+    line-height: 24px;
+    padding-bottom: 24px;
+}
+
+.latest-articles{
+    padding: 20px;
+}
+.latest-articles h1{
+    font-weight: 300;
+    font-size: 2.3rem;
+    text-align: center;
+    padding: 70px 0 40px 0;
+}
+
+.article-img{
+    width: 100%;
+    border-radius: 6px;
+}
+
+.body{
+    padding-left: 24px;
+}
+
+.postedBy{
+    padding-top: 20px;
+    font-size: .8rem;
+    color: var(--grayish-blue);
+}
+.article-title{
+    color: var(--dark-blue);
+    font-weight: 400;
+    width: 70%;
+    padding: 10px 0;
+}
+
+.description{
+    color: var(--grayish-blue);
+    line-height: 24px;
+    padding-bottom: 70px;
+}
+
+footer{
+    background-color: var(--dark-blue);
+    text-align: center;
+    padding: 40px
+}
+
+.social-link .logo-img{
+    width: 50%;
+    padding-bottom: 20px;
+    filter: brightness(0) invert(1);
+}
+.social-link-list{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+.social-link-list li a{
+    padding-right: 18px;
+}
+.social-link-list li a img{
+    width: 70%;
+}
+
+.ft-nav, .ft-other-nav{
+    list-style: none;
+}
+
+.ft-nav li, .ft-other-nav li{
+    padding-bottom: 20px;
+}
+
+.ft-nav li a, .ft-other-nav li a{
+    color: var(--white);
+}
+
+.ft-two{
+    padding-top: 20px;
+}
+
+.ft-two h4{
+    padding-top: 20px;
+    color: var(--grayish-blue);
+}
+
+
+
+@media screen and (min-width: 762px){
+    nav{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+    
+    nav .dropdown{
+        display: none;
+    }
+    #links{
+        display: block;
+    }
+    
+    #links{
+        display: flex;
+        list-style: none;
+    }
+    #links a {
+        margin-left: 30px;
+        color: var(--grayish-blue);
+        font-size: .8rem;
+    }
+    nav .request-invite{
+        display: block;
+    }
+    
+    .details{
+        flex-direction: row;
+        background-color: var(--very-light-gray);
+        justify-content: space-between;
+        height: 38rem;
+    }
+    
+    .mockup-img{
+        object-fit: cover;
+        object-position: 110px -100px;
+        width: 100%;
+    }
+    
+    .info{
+        align-self: center;
+        padding-left: 9rem;
+        padding-right: 4rem;
+        width: 50%;
+        text-align: initial;
+    }
+    
+    .info h1{
+        color: var(--dark-blue);
+        font-size: 3rem;
+        font-weight: 300;
+        padding-bottom: 25px;
+        
+    
+    }
+    
+    .info p{
+        color: var(--grayish-blue);
+        line-height: 1.5rem;
+        padding-bottom: 30px;
+    }
+    
+    .side-image{
+        background: url('./images/bg-intro-desktop.svg');
+        background-repeat: no-repeat;
+        background-size: 75rem 56rem;
+        background-position: -52px -220px;
+        padding: 0;
+    }
+    
+    
+    .reason-to-choose{
+        background-color: var(--light-grayish-blue);
+        padding: 6rem 0 5rem 0;
+        text-align: initial;
+    }
+    
+    .reason{
+        padding-left: 9rem;
+        width: 55%;
+    }
+    
+    .reason h1{
+        color: var(--dark-blue);
+        font-size: 2.2rem;
+        font-weight: 300;
+        padding-bottom: 30px;
+        padding-left: 0;
+    }
+    
+    .reason p{
+        color: var(--grayish-blue);
+        padding-bottom: 4rem;
+        line-height: 1.5rem;
+    }
+    
+    .list{
+        display: flex;
+        width: 78%;
+        margin: auto;
+    
+    }
+    .list div img{
+        width: 25%;
+        padding-bottom: 30px;
+    }
+    
+    .list div h2{
+        color: var(--dark-blue);
+        font-size: 1.3rem;
+        font-weight: 400;
+        padding-bottom: 1.3rem;
+        padding-left: 0;
+    }
+    .list div p{
+        font-size: .9rem;
+        color: var(--grayish-blue);
+        line-height: 1.5rem;
+    }
+    
+    .online-banking, .simple-budgeting, .fast-onboarding, .open-api{
+        width: 68%;
+    }
+    
+    .latest-articles{
+        padding: 2rem 8rem;
+    }
+    
+    .articles{
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+    
+    .article-card{
+        background-color: var(--white);
+    }
+    
+    .article-img{
+        width: 100%;
+        height: 12rem;
+        padding-bottom: 15px;
+        border-radius: 6px;
+    }
+    
+    .latest-articles h1{
+        text-align: initial;
+        font-weight: 300;
+        font-size: 2.1rem;
+        padding-bottom: 2.5rem;
+        color: var(--dark-blue);
+    }
+    
+    .body{
+        padding-left: 18px;
+    }
+    
+    .postedBy{
+        font-size: .7rem;
+        color: var(--grayish-blue);
+    }
+    .article-title{
+        color: var(--dark-blue);
+        font-size: .9rem;
+        font-weight: 400;
+        width: 70%;
+        padding: 10px 0;
+    }
+    
+    .description{
+        font-size: .8rem;
+        color: var(--grayish-blue);
+    }
+    
+    footer{
+        background: var(--dark-blue);
+        display: flex;
+        justify-content: space-between;
+        padding: 2.4rem 9rem;
+    }
+    
+    .ft-one{
+        display: flex;
+        justify-content: space-between;
+        flex-basis: 50%;
+    }
+    
+    .social-link-list{
+        display: flex;
+        list-style: none;
+    }
+    .social-link-list li a {
+        padding-right: 10px;
+    }
+    
+    .ft-nav, .ft-other-nav{
+        list-style: none;
+        align-self: center;
+    }
+    
+    .ft-nav li, .ft-other-nav li{
+        padding-bottom: 20px;
+    }
+    
+    .ft-nav li a, .ft-other-nav li a{
+        color: var(--light-grayish-blue);
+        font-size: .8rem;
+    }
+    
+    .social-link .logo-img{
+        padding-bottom: 60px;
+        filter: brightness(0) invert(1);
+    }
+    
+    .ft-two{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .ft-two h4{
+        padding-top: 25px;
+        color: var(--grayish-blue);
+        font-size: .8rem;
+    }
+    .ft-two .request-invite{
+        align-self: flex-end;
+    }    
+    
+}
