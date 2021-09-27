@@ -261,7 +261,6 @@ footer{
         flex-direction: row;
         background-color: var(--very-light-gray);
         justify-content: space-between;
-        height: 38rem;
     }
     
     .mockup-img{
