@@ -406,7 +406,6 @@ footer{
     }
     
     footer{
-        background: var(--dark-blue);
         display: flex;
         justify-content: space-between;
         padding: 2.4rem 9rem;
@@ -418,10 +417,6 @@ footer{
         flex-basis: 50%;
     }
     
-    .social-link-list{
-        display: flex;
-        list-style: none;
-    }
     .social-link-list li a {
         padding-right: 10px;
     }
@@ -441,8 +436,8 @@ footer{
     }
     
     .social-link .logo-img{
+        width: 100%;
         padding-bottom: 60px;
-        filter: brightness(0) invert(1);
     }
     
     .ft-two{
