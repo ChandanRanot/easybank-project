@@ -24,7 +24,12 @@ body{
 a{
     text-decoration: none;
 }
-
+header{
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    background-color: var(--white);
+}
 nav{
     display: flex;
     justify-content: space-around;
@@ -35,7 +40,7 @@ nav{
 
 #links{
     display: none;
-    position: absolute;
+    position: fixed;
     top: 75px;
     background: var(--white);
     width: 90%;
@@ -264,6 +269,8 @@ footer{
         padding: 0;
     }
     header{
+        overflow: initial;
+        position: initial;
         padding: 0 9rem;
     }
     .logo .logo-img{
