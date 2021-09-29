@@ -26,46 +26,63 @@ a{
 }
 
 nav{
-    background-color: var(--white);
-    overflow: hidden;
-    position: relative;
-    padding: 26px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 26px 0;
 }
+
 
 #links{
     display: none;
-}
-.logo{
-    display: block;
-}
-
-#links a {
-    text-decoration: none;
-    font-size: 17px;
-    display: block;
-    text-align: center;
-    padding: 12px 0;
-    color: var(--dark-blue);
-    font-weight: 400;
-}
-
-
-nav .dropdown{
-    display: block;
     position: absolute;
-    top: 22px;
-    right: 22px;
+    top: 75px;
     background: var(--white);
-    border: none;
+    width: 90%;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    list-style: none;
 }
+.navigation li{
+    margin: 24px 0;
+}
+
+.navigation li a{
+    color: var(--dark-blue);
+    font-weight: 300;
+    font-size: 18px;
+}
+
+#links a:hover{
+    border-bottom: 3px solid transparent;
+    border-image: linear-gradient(to right, var(--lime-green),var(--bright-cyan) );
+    border-image-slice: 1;
+}
+
+
 nav .request-invite{
     display: none;
+}
+
+.logo .logo-img{
+    position: absolute;
+    left: 25px;
+    top: 18px;
+}
+
+.dropdown{
+    background: white;
+    border: none;
+    right: 15px;
+    position: absolute;
 }
 
 
 .details{
     display: flex;
     flex-direction: column-reverse;
+    background: var(--very-light-gray);
 }
 .mockup-img{
     object-fit: cover;
@@ -83,8 +100,7 @@ nav .request-invite{
 }
 
 .info{
-    padding: 20px;
-    padding-bottom: 70px;
+    padding: 50px 20px 70px 20px;
     text-align: center;
 }
 
@@ -111,6 +127,9 @@ nav .request-invite{
     background: linear-gradient(to right, var(--lime-green),var(--bright-cyan) );
 }
 
+.request-invite:hover{
+    opacity: .5;
+}
 
 .reason-to-choose{
     padding: 70px 20px;
@@ -119,7 +138,7 @@ nav .request-invite{
 }
 
 .reason h1{
-    font-size: 1.9rem;
+    font-size: 2.3rem;
     font-weight: 400;
     padding: 0 22px;
     padding-bottom: 22px;
@@ -146,6 +165,7 @@ nav .request-invite{
 
 .latest-articles{
     padding: 20px;
+    background: var(--very-light-gray);
 }
 .latest-articles h1{
     font-weight: 300;
@@ -161,6 +181,7 @@ nav .request-invite{
 
 .body{
     padding-left: 24px;
+    background-color: var(--white);
 }
 
 .postedBy{
@@ -173,6 +194,9 @@ nav .request-invite{
     font-weight: 400;
     width: 70%;
     padding: 10px 0;
+}
+.article-title:hover{
+    color: var(--lime-green);
 }
 
 .description{
@@ -190,7 +214,6 @@ footer{
 .social-link .logo-img{
     width: 50%;
     padding-bottom: 20px;
-    filter: brightness(0) invert(1);
 }
 .social-link-list{
     list-style: none;
@@ -202,6 +225,7 @@ footer{
 .social-link-list li a{
     padding-right: 18px;
 }
+
 .social-link-list li a img{
     width: 70%;
 }
@@ -218,6 +242,10 @@ footer{
     color: var(--white);
 }
 
+.ft-nav li a:hover, .ft-other-nav li a:hover{
+    color: var(--lime-green);
+}
+
 .ft-two{
     padding-top: 20px;
 }
@@ -231,22 +259,28 @@ footer{
 
 @media screen and (min-width: 762px){
     nav{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+        justify-content: space-between;
         width: 100%;
+        padding: 0;
+    }
+    header{
+        padding: 0 9rem;
+    }
+    .logo .logo-img{
+        position: initial;
     }
     
     nav .dropdown{
         display: none;
     }
-    #links{
-        display: block;
-    }
     
     #links{
         display: flex;
-        list-style: none;
+        justify-content: center;
+        align-items: center;
+        position: initial;
+        width: 40%;
+        padding: 0;
     }
     #links a {
         margin-left: 30px;
@@ -334,8 +368,9 @@ footer{
     
     }
     .list div img{
-        width: 25%;
+        width: 28%;
         padding-bottom: 30px;
+        padding-left: 8px;
     }
     
     .list div h2{
@@ -356,7 +391,7 @@ footer{
     }
     
     .latest-articles{
-        padding: 2rem 8rem;
+        padding: 2rem 9rem;
     }
     
     .articles{
