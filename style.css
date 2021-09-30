@@ -260,6 +260,22 @@ footer{
     color: var(--grayish-blue);
 }
 
+.facebook:hover{
+    content: url(./images/icon-facebook-green.svg);
+}
+.youtube:hover{
+    content: url(./images/icon-youtube-green.svg);
+}
+.pinterest:hover{
+    content: url(./images/icon-pinterest-green.svg);
+}
+.twitter:hover{
+    content: url(./images/icon-twitter-green.svg);
+}
+.instagram:hover{
+    content: url(./images/icon-instagram-green.svg);
+}
+
 
 
 @media screen and (min-width: 762px){
